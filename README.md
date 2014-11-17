@@ -2,7 +2,11 @@ JATEToolkit
 ====
 The mavenized version of [JATEToolkit](https://code.google.com/p/jatetoolkit/).
 
-An example run:
+To build a self-contained JAR file with all the dependencies:
+
+    mvn clean package
+
+To run the TermEx (Term Extractor):
 
     java -Xmx512m -jar ./target/jate-2.0Alpha-SNAPSHOT-jar-with-dependencies.jar \
         /home/emre/data/belga/input \
