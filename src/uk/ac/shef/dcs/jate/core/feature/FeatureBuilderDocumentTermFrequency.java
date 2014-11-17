@@ -54,9 +54,10 @@ public class FeatureBuilderDocumentTermFrequency extends AbstractFeatureBuilder 
 		for (Document d : index.getDocuments()) {
 			_logger.info("For document " + d);
 			totalTermFreq += _wordCounter.countWords(d);
-            String context = CandidateTermExtractor.applyCharacterReplacement(
-                    d.getContent(), JATEProperties.TERM_CLEAN_PATTERN
-            );
+			String context = d.getContent();
+            //String context = CandidateTermExtractor.applyCharacterReplacement(
+            //        d.getContent(), JATEProperties.TERM_CLEAN_PATTERN
+            //);
 
 			Set<String> candidates = index.retrieveTermsCanonicalInDoc(d);
 			for (String np : candidates) {

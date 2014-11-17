@@ -70,8 +70,9 @@ public class PhraseExtractor {
 		    StringBuilder sb = new StringBuilder();
 		        
 		    for (String temp_w : words) {
-		        	
-			    String w = CandidateTermExtractor.applyCharacterReplacement(temp_w, JATEProperties.TERM_CLEAN_PATTERN_RAKE);
+
+				String w = temp_w;
+			    //String w = CandidateTermExtractor.applyCharacterReplacement(temp_w, JATEProperties.TERM_CLEAN_PATTERN_RAKE);
 			    String nw = w.trim().toLowerCase();
 			    
 			    /* To handle the case where tokenizer tokenizes the word "i.e." as 'i', '.e', '.'.

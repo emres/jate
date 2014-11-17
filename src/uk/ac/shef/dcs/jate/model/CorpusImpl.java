@@ -26,7 +26,7 @@ public class CorpusImpl implements Corpus {
 	public CorpusImpl(String path){
 		_docs=new HashSet<Document>();
 		File targetFolder = new File(path);
-		
+
 		File[] files = targetFolder.listFiles();
 		for (File f : files) {
 			try {

@@ -66,7 +66,7 @@ public class NGramExtractor extends CandidateTermExtractor {
             String[] tokens = NLPToolsControllerOpenNLP.getInstance().getTokeniser().tokenize(content);
             List<String> candidates = getNGram(tokens, JATEProperties.getInstance().getMaxMultipleWords(), true);
             for (String c : candidates) {
-                c = applyCharacterReplacement(c, JATEProperties.TERM_CLEAN_PATTERN);
+                //c = applyCharacterReplacement(c, JATEProperties.TERM_CLEAN_PATTERN);
                 String[] e = applySplitList(c);
 
                 for (String str : e) {

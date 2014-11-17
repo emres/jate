@@ -78,7 +78,7 @@ public class VerbPhraseExtractorOpenNLP extends CandidateTermExtractor {
             String[] pos = NLPToolsControllerOpenNLP.getInstance().getPosTagger().tag(tokens);
             String[] candidates = chunkVPs(tokens, pos);
             for (String c : candidates) {
-                c = applyCharacterReplacement(c, JATEProperties.TERM_CLEAN_PATTERN);
+                //c = applyCharacterReplacement(c, JATEProperties.TERM_CLEAN_PATTERN);
                 String[] e = applySplitList(c);
 
                 for (String str : e) {

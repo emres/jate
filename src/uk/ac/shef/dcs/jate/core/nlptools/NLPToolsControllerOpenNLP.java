@@ -45,7 +45,6 @@ public class NLPToolsControllerOpenNLP {
         SentenceModel sentModel = new SentenceModel(new FileInputStream(JATEProperties.getInstance().getNLPPath()+"/en-sent.bin"));
         _sentDetect = new SentenceDetectorME(sentModel);
 
-
 	}
 
 	public static NLPToolsControllerOpenNLP getInstance() throws IOException {

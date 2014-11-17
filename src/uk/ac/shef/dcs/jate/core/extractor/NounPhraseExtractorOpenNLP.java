@@ -107,7 +107,7 @@ public class NounPhraseExtractorOpenNLP extends CandidateTermExtractor {
         for (String c : candidates) {
         	
         	//modified code begins
-        	c = applyCharacterReplacement(c,JATEProperties.REGEX_QUOTES);
+        	//c = applyCharacterReplacement(c,JATEProperties.REGEX_QUOTES);
             /*    c = applyCharacterReplacement(c, JATEProperties.TERM_CLEAN_PATTERN);
                 String[] e = applySplitList(c);
 
@@ -159,7 +159,7 @@ public class NounPhraseExtractorOpenNLP extends CandidateTermExtractor {
             String[] pos = NLPToolsControllerOpenNLP.getInstance().getPosTagger().tag(tokens);
             String[] candidates = chunkNPs(tokens, pos);
             for (String c : candidates) {
-                c = applyCharacterReplacement(c, JATEProperties.TERM_CLEAN_PATTERN);
+                //c = applyCharacterReplacement(c, JATEProperties.TERM_CLEAN_PATTERN);
                 String[] e = applySplitList(c);
 
                 for (String str : e) {

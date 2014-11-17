@@ -49,7 +49,7 @@ public class FeatureBuilderCorpusTermFrequency extends AbstractFeatureBuilder {
 		int totalCorpusTermFreq = 0;
 		//for (Document d : index.getDocuments()) {
 		//	_logger.info("For Document " + d);
-			//String context = CandidateTermExtractor.applyCharacterReplacement(d.getContent(), JATEProperties.TERM_CLEAN_PATTERN);
+		//String context = CandidateTermExtractor.applyCharacterReplacement(d.getContent(), JATEProperties.TERM_CLEAN_PATTERN);
 		/*File file = new File ("C:\\Users\\aniya_agarwal\\Desktop\\reqtsent\\sample.txt");
 		Document doc=null;
 		try {
@@ -62,7 +62,8 @@ public class FeatureBuilderCorpusTermFrequency extends AbstractFeatureBuilder {
 		
 		for (Document d : index.getDocuments()) {
 			_logger.info("For Document " + d);
-			String context = CandidateTermExtractor.applyCharacterReplacement(d.getContent(), JATEProperties.TERM_CLEAN_PATTERN);
+			String context = d.getContent();
+//			String context = CandidateTermExtractor.applyCharacterReplacement(d.getContent(), JATEProperties.TERM_CLEAN_PATTERN);
 			
 			totalCorpusTermFreq += _wordCounter.countWords(d);
 
