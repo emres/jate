@@ -32,6 +32,39 @@ public class NLPToolsControllerOpenNLP {
 	private SentenceDetector _sentDetect;
 	private Tokenizer _tokenizer;
 
+/*
+	// For French
+	private NLPToolsControllerOpenNLP() throws IOException {
+		POSModel posModel = new POSModel(new FileInputStream(JATEProperties.getInstance().getNLPPath()+"/fr-pos-maxent.bin"));
+		_posTagger = new POSTaggerME(posModel);
+
+		ChunkerModel chunkerModel = new ChunkerModel(new FileInputStream(JATEProperties.getInstance().getNLPPath()+"/fr-chunker.bin"));
+		_npChunker = new ChunkerME(chunkerModel);
+
+		TokenizerModel tokenizerModel = new TokenizerModel(new FileInputStream(JATEProperties.getInstance().getNLPPath()+"/fr-token.bin"));
+		_tokenizer = new TokenizerME(tokenizerModel);
+
+		SentenceModel sentModel = new SentenceModel(new FileInputStream(JATEProperties.getInstance().getNLPPath()+"/fr-sent.bin"));
+		_sentDetect = new SentenceDetectorME(sentModel);
+
+	}*/
+
+	/*// For Dutch
+	private NLPToolsControllerOpenNLP() throws IOException {
+		POSModel posModel = new POSModel(new FileInputStream(JATEProperties.getInstance().getNLPPath()+"/nl-pos-maxent.bin"));
+		_posTagger = new POSTaggerME(posModel);
+
+		ChunkerModel chunkerModel = new ChunkerModel(new FileInputStream(JATEProperties.getInstance().getNLPPath()+"/en-chunker.bin"));
+		_npChunker = new ChunkerME(chunkerModel);
+
+		TokenizerModel tokenizerModel = new TokenizerModel(new FileInputStream(JATEProperties.getInstance().getNLPPath()+"/nl-token.bin"));
+		_tokenizer = new TokenizerME(tokenizerModel);
+
+		SentenceModel sentModel = new SentenceModel(new FileInputStream(JATEProperties.getInstance().getNLPPath()+"/nl-sent.bin"));
+		_sentDetect = new SentenceDetectorME(sentModel);
+
+	}*/
+
 	private NLPToolsControllerOpenNLP() throws IOException {
         POSModel posModel = new POSModel(new FileInputStream(JATEProperties.getInstance().getNLPPath()+"/en-pos-maxent.bin"));
 		_posTagger = new POSTaggerME(posModel);
